@@ -1,3 +1,6 @@
+adminlte/Scripts/* linguist-vendored
+adminlte/Content/* linguist-vendored
+*.cshtml linguist-language=C#
 ###############################################################################
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
