@@ -43,6 +43,11 @@ namespace motekarteknologi.Controllers
             return View();
         }
 
+        public IActionResult BlankPage()
+        {
+            return View();
+        }
+
         public IActionResult PacePage()
         {
             return View();

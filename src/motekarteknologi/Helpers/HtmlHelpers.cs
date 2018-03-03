@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace motekarteknologi.Helpers
+namespace motekarteknologi
 {
-    public static class HTMLHelperExtensions
+    public static class HtmlHelpers
     {
-        public static string IsSelected(this HtmlHelper html, string controller = null, string action = null, string cssClass = null)
+        public static string IsSelected(this IHtmlHelper html, string controller = null, string action = null, string cssClass = null)
         {
-
             if (String.IsNullOrEmpty(cssClass))
                 cssClass = "active";
 
@@ -27,9 +27,9 @@ namespace motekarteknologi.Helpers
                 cssClass : String.Empty;
         }
 
-        public static string PageClass(this HtmlHelper html)
+        public static string PageClass(this IHtmlHelper htmlHelper)
         {
-            string currentAction = (string)html.ViewContext.RouteData.Values["action"];
+            string currentAction = (string)htmlHelper.ViewContext.RouteData.Values["action"];
             return currentAction;
         }
     }
