@@ -8,7 +8,22 @@ namespace motekarteknologi.Controllers
 {
     public class LayoutController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Topnavigation()
+        {
+            return View();
+        }
+
+        public IActionResult Boxed()
+        {
+            return View();
+        }
+
+        public IActionResult Fixed()
+        {
+            return View();
+        }
+
+        public IActionResult CollapsedSidebar()
         {
             return View();
         }

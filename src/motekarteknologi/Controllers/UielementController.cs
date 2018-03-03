@@ -8,7 +8,32 @@ namespace motekarteknologi.Controllers
 {
     public class UielementController : Controller
     {
-        public IActionResult Index()
+        public IActionResult General()
+        {
+            return View();
+        }
+
+        public IActionResult Icon()
+        {
+            return View();
+        }
+
+        public IActionResult Button()
+        {
+            return View();
+        }
+
+        public IActionResult Slider()
+        {
+            return View();
+        }
+
+        public IActionResult Timeline()
+        {
+            return View();
+        }
+
+        public IActionResult Modal()
         {
             return View();
         }

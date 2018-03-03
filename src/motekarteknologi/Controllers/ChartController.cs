@@ -8,7 +8,22 @@ namespace motekarteknologi.Controllers
 {
     public class ChartController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Chartjs()
+        {
+            return View();
+        }
+
+        public IActionResult Morris()
+        {
+            return View();
+        }
+
+        public IActionResult Flot()
+        {
+            return View();
+        }
+
+        public IActionResult InlineChart()
         {
             return View();
         }

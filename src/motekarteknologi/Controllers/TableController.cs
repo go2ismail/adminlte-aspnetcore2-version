@@ -8,7 +8,12 @@ namespace motekarteknologi.Controllers
 {
     public class TableController : Controller
     {
-        public IActionResult Index()
+        public IActionResult SimpleTable()
+        {
+            return View();
+        }
+
+        public IActionResult DataTable()
         {
             return View();
         }

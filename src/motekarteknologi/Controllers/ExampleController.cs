@@ -8,7 +8,42 @@ namespace motekarteknologi.Controllers
 {
     public class ExampleController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Invoice()
+        {
+            return View();
+        }
+
+        public IActionResult Profile()
+        {
+            return View();
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        public IActionResult Lockscreen()
+        {
+            return View();
+        }
+
+        public IActionResult Error404()
+        {
+            return View();
+        }
+
+        public IActionResult Error500()
+        {
+            return View();
+        }
+
+        public IActionResult PacePage()
         {
             return View();
         }

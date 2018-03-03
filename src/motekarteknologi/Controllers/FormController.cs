@@ -8,7 +8,17 @@ namespace motekarteknologi.Controllers
 {
     public class FormController : Controller
     {
-        public IActionResult Index()
+        public IActionResult GeneralElement()
+        {
+            return View();
+        }
+
+        public IActionResult AdvancedElement()
+        {
+            return View();
+        }
+
+        public IActionResult Editor()
         {
             return View();
         }
