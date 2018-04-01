@@ -23,9 +23,9 @@ this repo, provide full **ASP.NET Core 2 MVC** version of AdminLTE, consisting a
 - Examples
 - Multilevel
 
-![adminltemvccore2](src/wwwroot/img/adminlte-aspnetcore2-p1.png)
-![adminltemvccore2](src/wwwroot/img/adminlte-aspnetcore2-p2.png)
-![adminltemvccore2](src/wwwroot/img/adminlte-aspnetcore2-p3.png)
+![adminltemvccore2](src/src/wwwroot/adminlte/img/adminlte-aspnetcore2-p1.PNG)
+![adminltemvccore2](src/src/wwwroot/adminlte/img/adminlte-aspnetcore2-p2.PNG
+![adminltemvccore2](src/src/wwwroot/adminlte/img/adminlte-aspnetcore2-p3.PNG)
 
 # Development Tools & Environment
 
@@ -47,7 +47,7 @@ You can **Clone / Download** the repo and then start building beautiful web app 
 
 I have provide simple Ajax jQuery CRUD example
 
-![adminltemvccore2](src/wwwroot/img/adminlte-aspnetcore2-p4.png)
+![adminltemvccore2](src/src/wwwroot/adminlte/img/adminlte-aspnetcore2-p4.PNG)
 
 
 
