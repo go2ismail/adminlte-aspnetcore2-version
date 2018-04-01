@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Todo List
+            <small>place where you can write your todo list item.</small>
+        </h1>
+        <ol class="breadcrumb"></ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Create / Edit Todo Item</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <!-- form start -->
+                    <form id="formTodo">
+                        <div class="box-body">
+                            <input type="hidden" id="id" name="id" />
+                            <div class="form-group">
+                                <label>Todo Item</label>
+                                <input class="form-control" id="todo" name="todo" placeholder="Write your todo item ...">
+                            </div>
+                            <div class="form-group">
+                                <label>Progress</label>
+                                <input id="progress" name="progress" type="number" min="0" max="100" class="form-control" placeholder="number between 0 and 100">
+                            </div>
+
+
+                        </div>
+                        <!-- /.box-body -->
+
+                        <div class="box-footer">
+                            <input type="button" id="Create" value="Create" class="btn btn-success" onclick="CreateData()" />
+                            <input type="button" id="Update" value="Update" class="btn btn-info hidden" onclick="UpdateData()" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-md-6">
+
+
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Todo List</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body no-padding">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 10px">#</th>
+                                    <th>Todo Item</th>
+                                    <th>Progress</th>
+                                    <th style="width: 40px">Percentage</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody"></tbody>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+
+    </section>
+    <!-- /.content -->
+</div>
+@section Scripts{
+<environment include="Development,Staging,Production">
+    <script src="~/areas/crud/todo/index.js"></script>
+</environment>
+}
+

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewData["Title"]</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+
+    @{ await Html.RenderPartialAsync("_CSS");}
+
+    @RenderSection("Styles", required: false)
+</head>
+<body class="hold-transition fixed skin-blue sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="@Url.Action("Index", "Home", new { area = "" })" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>C</b>ore2</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>ASP.NET</b>Core2</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            @Html.Partial("_HeaderNavbar")
+        </header>
+
+        <!-- =============================================== -->
+        <!-- Left side column. contains the sidebar -->
+        @Html.Partial("_LeftNavigation")
+
+        <!-- =============================================== -->
+        <!-- Content Wrapper. Contains page content -->
+        @RenderBody()
+        <!-- /.content-wrapper -->
+
+        @Html.Partial("_Footer")
+
+        <!-- Control Sidebar -->
+        @Html.Partial("_ControlSidebar")
+    </div>
+
+
+    @{ await Html.RenderPartialAsync("_JS");}
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

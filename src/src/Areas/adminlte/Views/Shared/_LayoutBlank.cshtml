@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewData["Title"]</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+
+    @{ await Html.RenderPartialAsync("~/Areas/adminlte/Views/Shared/_CSS.cshtml");}
+
+
+    @RenderSection("Styles", required: false)
+</head>
+<body class="hold-transition register-page">
+
+    <nav class="navbar bg-purple-gradient navbar-fixed-top">
+    </nav>
+    @RenderBody()
+
+
+    @{ await Html.RenderPartialAsync("~/Areas/adminlte/Views/Shared/_JS.cshtml");}
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

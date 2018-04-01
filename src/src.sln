@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "motekarteknologi", "motekarteknologi\motekarteknologi.csproj", "{72549C89-F5DE-42A8-ADEF-120BDA316531}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src", "src\src.csproj", "{DC716BE3-C295-4131-8C2C-379839DFCC36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{72549C89-F5DE-42A8-ADEF-120BDA316531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72549C89-F5DE-42A8-ADEF-120BDA316531}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72549C89-F5DE-42A8-ADEF-120BDA316531}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72549C89-F5DE-42A8-ADEF-120BDA316531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC716BE3-C295-4131-8C2C-379839DFCC36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC716BE3-C295-4131-8C2C-379839DFCC36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC716BE3-C295-4131-8C2C-379839DFCC36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC716BE3-C295-4131-8C2C-379839DFCC36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F19EF282-4A90-46F4-8641-CC6B18C6993B}
+		SolutionGuid = {46FC2038-20A9-42CD-8740-43208FFF1183}
 	EndGlobalSection
 EndGlobal
