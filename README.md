@@ -24,7 +24,7 @@ this repo, provide full **ASP.NET Core 2 MVC** version of AdminLTE, consisting a
 - Multilevel
 
 ![adminltemvccore2](src/src/wwwroot/adminlte/img/adminlte-aspnetcore2-p1.PNG)
-![adminltemvccore2](src/src/wwwroot/adminlte/img/adminlte-aspnetcore2-p2.PNG
+![adminltemvccore2](src/src/wwwroot/adminlte/img/adminlte-aspnetcore2-p2.PNG)
 ![adminltemvccore2](src/src/wwwroot/adminlte/img/adminlte-aspnetcore2-p3.PNG)
 
 # Development Tools & Environment
