@@ -50,7 +50,7 @@ I have provide simple Ajax jQuery CRUD example
 ![adminltemvccore2](src/src/wwwroot/adminlte/img/adminlte-aspnetcore2-p4.PNG)
 
 # Supported by CodeRush.Co
-[CodeRush.CO] source code collections (https://coderush.co)
+[CodeRush.CO] source code collections (https://coderush.co). 50% Off All Products, Use Discount Code **GITHUB50**
 
 
 
