@@ -24,7 +24,6 @@
  * limitations under the License.
  * ========================================================= */
 
-
 /**
  * Bridget makes jQuery widgets
  * v1.0.1
@@ -52,9 +51,7 @@
 	// Reference to Slider constructor
 	var Slider;
 
-
 	(function( $ ) {
-
 		'use strict';
 
 		// -------------------------- utils -------------------------- //
@@ -66,7 +63,6 @@
 		// -------------------------- definition -------------------------- //
 
 		function defineBridget( $ ) {
-
 			// bail if no jQuery
 			if ( !$ ) {
 				return;
@@ -93,7 +89,6 @@
 			    this.options = $.extend( true, this.options, opts );
 			  };
 			}
-
 
 			// -------------------------- plugin bridge -------------------------- //
 
@@ -162,7 +157,6 @@
 			      }
 			    }
 			  };
-
 			}
 
 			// -------------------------- bridget -------------------------- //
@@ -179,14 +173,11 @@
 			};
 
 			return $.bridget;
-
 		}
 
 	  	// get jquery from browser global
 	  	defineBridget( $ );
-
 	})( $ );
-
 
 	/*************************************************
 
@@ -195,7 +186,6 @@
 	**************************************************/
 
 	(function($) {
-
 		var ErrorMsgs = {
 			formatInvalidInputErrorMsg : function(input) {
 				return "Invalid input value '" + input + "' passed in";
@@ -291,7 +281,6 @@
 			}
 		};
 
-
 		/*************************************************
 
 							CONSTRUCTOR
@@ -303,7 +292,6 @@
 		};
 
 		function createNewSlider(element, options) {
-
 			/*
 				The internal state object is used to store data about the current 'state' of slider.
 
@@ -318,7 +306,6 @@
 				inDrag: false,
 				over: false
 			};
-
 
 			if(typeof element === "string") {
 				this.element = document.querySelector(element);
@@ -358,14 +345,10 @@
 					-- default for "horizontal" -> "left"
 			*/
 			if(this.options.orientation === "vertical" && (this.options.tooltip_position === "top" || this.options.tooltip_position === "bottom")) {
-
 				this.options.tooltip_position	= "right";
-
 			}
 			else if(this.options.orientation === "horizontal" && (this.options.tooltip_position === "left" || this.options.tooltip_position === "right")) {
-
 				this.options.tooltip_position	= "top";
-
 			}
 
 			function getDataAttrib(element, optName) {
@@ -477,7 +460,6 @@
 					}
 				}
 
-
 				var createAndAppendTooltipSubElements = function(tooltipElem) {
 					var arrow = document.createElement("div");
 					arrow.className = "tooltip-arrow";
@@ -487,7 +469,6 @@
 
 					tooltipElem.appendChild(arrow);
 					tooltipElem.appendChild(inner);
-
 				};
 
 				/* Create tooltip elements */
@@ -505,7 +486,6 @@
 				sliderTooltipMax.className = "tooltip tooltip-max";
 				sliderTooltipMax.setAttribute('role', 'presentation');
 				createAndAppendTooltipSubElements(sliderTooltipMax);
-
 
 				/* Append components to sliderElem */
 				this.sliderElem.appendChild(sliderTrack);
@@ -597,7 +577,6 @@
 				this.stylePos = 'left';
 				this.mousePos = 'pageX';
 				this.sizePos = 'offsetWidth';
-
 			}
 			this._setTooltipPosition();
 			/* In case ticks are specified, overwrite the min and max bounds */
@@ -676,7 +655,6 @@
 			}
 			this.sliderElem.addEventListener("mousedown", this.mousedown, false);
 
-
 			// Bind tooltip-related handlers
 			if(this.options.tooltip === 'hide') {
 				this._addClass(this.tooltip, 'hide');
@@ -707,8 +685,6 @@
 				this.disable();
 			}
 		}
-
-
 
 		/*************************************************
 
@@ -1015,7 +991,6 @@
 
 				/* Position ticks and labels */
 				if (Array.isArray(this.options.ticks) && this.options.ticks.length > 0) {
-
 					var styleSize = this.options.orientation === 'vertical' ? 'height' : 'width';
 					var styleMargin = this.options.orientation === 'vertical' ? 'marginTop' : 'marginLeft';
 					var labelSize = this._state.size / (this.options.ticks.length - 1);
@@ -1041,7 +1016,6 @@
 						}
 					}
 					for (var i = 0; i < this.options.ticks.length; i++) {
-
 						var percentage = this.options.ticks_positions[i] || this._toPercentage(this.options.ticks[i]);
 
 						if (this.options.reversed) {
@@ -1569,7 +1543,6 @@
 			var namespace = $.fn.slider ? 'bootstrapSlider' : 'slider';
 			$.bridget(namespace, Slider);
 		}
-
 	})( $ );
 
 	return Slider;

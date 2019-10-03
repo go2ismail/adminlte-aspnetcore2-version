@@ -1,21 +1,21 @@
 module('Mouse Navigation 2011', {
-    setup: function(){
+    setup: function () {
         /*
             Tests start with picker on March 31, 2011.
         */
         this.input = $('<input type="text" value="31-03-2011">')
-                        .appendTo('#qunit-fixture')
-                        .datepicker({format: "dd-mm-yyyy"})
-                        .focus(); // Activate for visibility checks
+            .appendTo('#qunit-fixture')
+            .datepicker({ format: "dd-mm-yyyy" })
+            .focus(); // Activate for visibility checks
         this.dp = this.input.data('datepicker');
         this.picker = this.dp.picker;
     },
-    teardown: function(){
+    teardown: function () {
         this.picker.remove();
     }
 });
 
-test('Selecting date from previous month while in January changes month and year displayed', function(){
+test('Selecting date from previous month while in January changes month and year displayed', function () {
     var target;
 
     this.input.val('01-01-2011');
@@ -40,7 +40,7 @@ test('Selecting date from previous month while in January changes month and year
     equal(target.text(), '28'); // Should be Nov 28
 });
 
-test('Selecting date from next month while in December changes month and year displayed', function(){
+test('Selecting date from next month while in December changes month and year displayed', function () {
     var target;
 
     this.input.val('01-12-2010');

@@ -2,7 +2,7 @@
  * Polish translation for bootstrap-datepicker
  * Robert <rtpm@gazeta.pl>
  */
-;(function($){
+; (function ($) {
     $.fn.datepicker.dates['pl'] = {
         days: ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"],
         daysShort: ["Niedz.", "Pon.", "Wt.", "Śr.", "Czw.", "Piąt.", "Sob."],

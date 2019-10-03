@@ -2,7 +2,7 @@
  * Uzbek latin translation for bootstrap-datepicker
  * Kakhramonov Javlonbek <kakjavlon@gmail.com>
  */
-;(function($){
+; (function ($) {
     $.fn.datepicker.dates['uz-latn'] = {
         days: ["Yakshanba", "Dushanba", "Seshanba", "Chorshanba", "Payshanba", "Juma", "Shanba"],
         daysShort: ["Yak", "Du", "Se", "Chor", "Pay", "Ju", "Sha"],

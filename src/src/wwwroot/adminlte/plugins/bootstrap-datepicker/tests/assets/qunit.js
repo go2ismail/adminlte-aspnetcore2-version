@@ -9,7 +9,6 @@
  */
 
 (function(window) {
-
 var defined = {
 	setTimeout: typeof window.setTimeout !== "undefined",
 	sessionStorage: (function() {
@@ -219,7 +218,6 @@ Test.prototype = {
 			li.appendChild( b );
 			li.appendChild( a );
 			li.appendChild( ol );
-
 		} else {
 			for ( i = 0; i < this.assertions.length; i++ ) {
 				if ( !this.assertions[i].result ) {
@@ -269,11 +267,9 @@ Test.prototype = {
 			synchronize(run, true);
 		}
 	}
-
 };
 
 var QUnit = {
-
 	// call on start of module test to prepend name to all tests
 	module: function(name, testEnvironment) {
 		config.currentModule = name;
@@ -601,7 +597,6 @@ extend(QUnit, {
 			event.initMouseEvent(type, true, true, elem.ownerDocument.defaultView,
 				0, 0, 0, 0, 0, false, false, false, false, 0, null);
 			elem.dispatchEvent( event );
-
 		} else if ( elem.fireEvent ) {
 			elem.fireEvent("on"+type);
 		}
@@ -1094,7 +1089,6 @@ function runLoggingCallbacks(key, scope, args) {
 // Test for equality any JavaScript type.
 // Author: Philippe Rathé <prathe@gmail.com>
 QUnit.equiv = (function() {
-
 	var innerEquiv; // the real equiv function
 	var callers = []; // stack to decide between skip/abort functions
 	var parents = []; // stack to avoiding loops from circular referencing
@@ -1116,7 +1110,6 @@ QUnit.equiv = (function() {
 	};
 
 	var callbacks = (function () {
-
 		// for string, boolean, number and null
 		function useStrictEquality(b, a) {
 			if (b instanceof a.constructor || a instanceof b.constructor) {
@@ -1271,7 +1264,6 @@ QUnit.equiv = (function() {
 	};
 
 	return innerEquiv;
-
 }());
 
 /**

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using src.Models;
-using src.Areas.crud.Models;
 
 namespace src.Data
 {
@@ -24,6 +19,6 @@ namespace src.Data
             // Add your customizations after calling base.OnModelCreating(builder);
         }
 
-        public DbSet<src.Areas.crud.Models.todoItem> todoItem { get; set; }
+        public DbSet<src.Areas.crud.Models.todoItem> TodoItem { get; set; }
     }
 }

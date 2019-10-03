@@ -11,6 +11,7 @@ $(function () {
 
   // Make the dashboard widgets sortable Using jquery UI
   $('.connectedSortable').sortable({
+    containment         : $('section.content'),
     placeholder         : 'sort-highlight',
     connectWith         : '.connectedSortable',
     handle              : '.box-header, .nav-tabs',
@@ -197,7 +198,7 @@ $(function () {
     line.redraw();
   });
 
-   /* The todo list plugin */
+  /* The todo list plugin */
   $('.todo-list').todoList({
     onCheck  : function () {
       window.console.log($(this), 'The element has been checked');
