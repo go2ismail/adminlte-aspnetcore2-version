@@ -1,25 +1,25 @@
 <!doctype html>
 <html>
-	<head>
-		<title>Doughnut Chart</title>
-		<script src="../Chart.js"></script>
-		<style>
-			body{
-				padding: 0;
-				margin: 0;
-			}
-			#canvas-holder{
-				width:30%;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="canvas-holder">
-			<canvas id="chart-area" width="500" height="500"/>
-		</div>
+<head>
+    <title>Doughnut Chart</title>
+    <script src="../Chart.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
 
+        #canvas-holder {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-holder">
+        <canvas id="chart-area" width="500" height="500" />
+    </div>
 
-	<script>
+    <script>
 
 		var doughnutData = [
 				{
@@ -59,9 +59,6 @@
 				var ctx = document.getElementById("chart-area").getContext("2d");
 				window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
 			};
-
-
-
-	</script>
-	</body>
+    </script>
+</body>
 </html>

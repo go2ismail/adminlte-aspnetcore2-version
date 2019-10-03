@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Net.Http.Headers;
 using src.Data;
 using src.Models;
@@ -30,22 +31,23 @@ namespace src
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddControllers();
+
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
             //lower url
             services.AddRouting(options => options.LowercaseUrls = true);
 
-            services.AddMvc();
+            services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
             }
             else
             {
@@ -61,8 +63,10 @@ namespace src
                         "public,max-age=" + durationInSeconds;
                 }
             });
+            app.UseRouting();
 
             app.UseAuthentication();
+
 
             app.UseMvc(routes =>
             {
@@ -75,9 +79,6 @@ namespace src
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}"
                     );
-
-
-
             });
         }
     }

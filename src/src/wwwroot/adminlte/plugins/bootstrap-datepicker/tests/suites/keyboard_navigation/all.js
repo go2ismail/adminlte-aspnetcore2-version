@@ -1,18 +1,18 @@
 module('Keyboard Navigation (All)', {
-    setup: function(){
+    setup: function () {
         this.input = $('<input type="text">')
-                        .appendTo('#qunit-fixture')
-                        .datepicker({format: "dd-mm-yyyy"})
-                        .focus(); // Activate for visibility checks
+            .appendTo('#qunit-fixture')
+            .datepicker({ format: "dd-mm-yyyy" })
+            .focus(); // Activate for visibility checks
         this.dp = this.input.data('datepicker');
         this.picker = this.dp.picker;
     },
-    teardown: function(){
+    teardown: function () {
         this.picker.remove();
     }
 });
 
-test('TAB hides picker', function(){
+test('TAB hides picker', function () {
     var target;
 
     ok(this.picker.is(':visible'), 'Picker is visible');
@@ -25,7 +25,7 @@ test('TAB hides picker', function(){
     ok(this.picker.is(':not(:visible)'), 'Picker is hidden');
 });
 
-test('by day (right/left arrows) with daysOfWeekDisabled', function(){
+test('by day (right/left arrows) with daysOfWeekDisabled', function () {
     var target;
 
     this.input.val('04-03-2013');
@@ -43,7 +43,7 @@ test('by day (right/left arrows) with daysOfWeekDisabled', function(){
     datesEqual(this.dp.viewDate, UTCDate(2013, 2, 1));
 });
 
-test('by day (right/left arrows) with datesDisabled', function(){
+test('by day (right/left arrows) with datesDisabled', function () {
     var target;
 
     this.input.val('04-03-2013');

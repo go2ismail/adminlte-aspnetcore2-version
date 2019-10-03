@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using src.Areas.crud.Models;
@@ -12,11 +10,11 @@ namespace src.Areas.crud.api
 {
     [Produces("application/json")]
     [Route("api/[controller]/[action]")]
-    public class todoItemController : Controller
+    public class TodoItemController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public todoItemController(ApplicationDbContext context)
+        public TodoItemController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -25,7 +23,7 @@ namespace src.Areas.crud.api
         [HttpGet]
         public IEnumerable<todoItem> GettodoItem()
         {
-            return _context.todoItem;
+            return _context.TodoItem;
         }
 
         // GET: api/todoItem/5
@@ -37,7 +35,7 @@ namespace src.Areas.crud.api
                 return BadRequest(ModelState);
             }
 
-            var todoItem = await _context.todoItem.SingleOrDefaultAsync(m => m.id == id);
+            var todoItem = await _context.TodoItem.SingleOrDefaultAsync(m => m.id == id);
 
             if (todoItem == null)
             {
@@ -55,7 +53,7 @@ namespace src.Areas.crud.api
             {
                 return BadRequest(ModelState);
             }
-            
+
 
             _context.Entry(todoItem).State = EntityState.Modified;
 
@@ -68,8 +66,8 @@ namespace src.Areas.crud.api
         [HttpPost]
         public async Task<IActionResult> PosttodoItem(todoItem todoItem)
         {
-           
-            _context.todoItem.Add(todoItem);
+
+            _context.TodoItem.Add(todoItem);
             await _context.SaveChangesAsync();
 
             return Ok(todoItem);
@@ -84,21 +82,21 @@ namespace src.Areas.crud.api
                 return BadRequest(ModelState);
             }
 
-            var todoItem = await _context.todoItem.SingleOrDefaultAsync(m => m.id == id);
+            var todoItem = await _context.TodoItem.SingleOrDefaultAsync(m => m.id == id);
             if (todoItem == null)
             {
                 return NotFound();
             }
 
-            _context.todoItem.Remove(todoItem);
+            _context.TodoItem.Remove(todoItem);
             await _context.SaveChangesAsync();
 
             return Ok(todoItem);
         }
 
-        private bool todoItemExists(int id)
+        private bool TodoItemExists(int id)
         {
-            return _context.todoItem.Any(e => e.id == id);
+            return _context.TodoItem.Any(e => e.id == id);
         }
     }
 }

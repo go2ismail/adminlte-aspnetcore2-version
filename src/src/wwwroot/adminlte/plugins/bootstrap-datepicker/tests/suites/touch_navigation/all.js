@@ -1,18 +1,18 @@
 module('Touch Navigation (All)', {
-    setup: function(){
+    setup: function () {
         this.input = $('<input type="text">')
-                        .appendTo('#qunit-fixture')
-                        .datepicker({format: "dd-mm-yyyy"})
-                        .focus(); // Activate for visibility checks
+            .appendTo('#qunit-fixture')
+            .datepicker({ format: "dd-mm-yyyy" })
+            .focus(); // Activate for visibility checks
         this.dp = this.input.data('datepicker');
         this.picker = this.dp.picker;
     },
-    teardown: function(){
+    teardown: function () {
         this.picker.remove();
     }
 });
 
-test('Tapping outside datepicker hides datepicker', function(){
+test('Tapping outside datepicker hides datepicker', function () {
     var $otherelement = $('<div />');
     $('body').append($otherelement);
 

@@ -3,26 +3,25 @@
   "defaultProvider": "cdnjs",
   "libraries": [
     {
-      "library": "admin-lte@2.4.10",
+      "library": "admin-lte@2.4.18",
       "destination": "wwwroot/adminlte/"
     },
     {
-      "library": "twitter-bootstrap@3.4.1",
+      "library": "twitter-bootstrap@4.3.1",
       "destination": "wwwroot/lib/bootstrap/dist/"
     },
     {
-      "library": "jquery@3.3.1",
+      "library": "jquery@3.4.1",
       "destination": "wwwroot/lib/jquery/dist/"
     },
     {
-      "library": "jquery-validate@1.19.0",
+      "library": "jquery-validate@1.19.1",
       "destination": "wwwroot/lib/jquery-validation/dist/",
       "files": ["additional-methods.js","jquery.validate.js", "jquery.validate.min.js"]
     },
     {
-      "library": "jquery-validation-unobtrusive@3.2.11",
-      "destination": "wwwroot/lib/jquery-validation-unobtrusive/"
-
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive/",
+      "library": "jquery-validation-unobtrusive@3.2.11"
     }
 
 

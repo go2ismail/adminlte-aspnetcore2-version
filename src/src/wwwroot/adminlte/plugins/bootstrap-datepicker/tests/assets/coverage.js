@@ -1,24 +1,24 @@
-(function(){
+(function () {
     //we want this at global scope so outside callers can find it. In a more realistic implementation we
     //should probably put it in a namespace.
-    window.getCoverageByLine = function(silent) {
+    window.getCoverageByLine = function (silent) {
         var key = null;
         var lines = null;
         var source = null;
         //look for code coverage data
         if (typeof window._$jscoverage === 'object') {
-            for (key in _$jscoverage) {}
+            for (key in _$jscoverage) { }
             lines = _$jscoverage[key];
         }
 
         if (!lines && !silent) {
-           console.log('code coverage data is NOT available');
+            console.log('code coverage data is NOT available');
         }
 
         return { 'key': key, 'lines': lines };
     };
 
-    QUnit.done = function(t) {
+    QUnit.done = function (t) {
         var cvgInfo = getCoverageByLine(true);
         if (!!cvgInfo.key) {
             var testableLines = 0;

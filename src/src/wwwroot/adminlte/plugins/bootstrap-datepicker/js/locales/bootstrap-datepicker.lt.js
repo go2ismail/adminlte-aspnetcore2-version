@@ -3,7 +3,7 @@
  * Šarūnas Gliebus <ssharunas@yahoo.co.uk>
  */
 
-;(function($){
+; (function ($) {
     $.fn.datepicker.dates['lt'] = {
         days: ["Sekmadienis", "Pirmadienis", "Antradienis", "Trečiadienis", "Ketvirtadienis", "Penktadienis", "Šeštadienis"],
         daysShort: ["S", "Pr", "A", "T", "K", "Pn", "Š"],
@@ -11,9 +11,9 @@
         months: ["Sausis", "Vasaris", "Kovas", "Balandis", "Gegužė", "Birželis", "Liepa", "Rugpjūtis", "Rugsėjis", "Spalis", "Lapkritis", "Gruodis"],
         monthsShort: ["Sau", "Vas", "Kov", "Bal", "Geg", "Bir", "Lie", "Rugp", "Rugs", "Spa", "Lap", "Gru"],
         today: "Šiandien",
-        monthsTitle:"Mėnesiai",
-        clear:"Išvalyti",
+        monthsTitle: "Mėnesiai",
+        clear: "Išvalyti",
         weekStart: 1,
-        format:"yyyy-mm-dd"
+        format: "yyyy-mm-dd"
     };
 }(jQuery));

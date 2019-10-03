@@ -8,13 +8,13 @@ page.viewportSize = {
     height: 600
 };
 
-page.open(sys.args[1], function(status){
-    if (status !== 'success'){
+page.open(sys.args[1], function (status) {
+    if (status !== 'success') {
         console.log('Bad status: %s', status);
         phantom.exit(1);
     }
-    window.setTimeout(function(){
-        var box = page.evaluate(function(){
+    window.setTimeout(function () {
+        var box = page.evaluate(function () {
             var lefts, rights, tops, bottoms,
                 padding = 10, // px
                 selection, show;
@@ -26,23 +26,23 @@ page.open(sys.args[1], function(status){
             show = $('body').data('show');
             show = show ? $(show) : $('*');
             show
-                .filter(function(){
+                .filter(function () {
                     return 'datepicker' in $(this).data();
                 })
                 .datepicker('show');
 
             // Get bounds of selected elements
             selection = $($('body').data('capture'));
-            tops = selection.map(function(){
+            tops = selection.map(function () {
                 return $(this).offset().top;
             }).toArray();
-            lefts = selection.map(function(){
+            lefts = selection.map(function () {
                 return $(this).offset().left;
             }).toArray();
-            bottoms = selection.map(function(){
+            bottoms = selection.map(function () {
                 return $(this).offset().top + $(this).outerHeight();
             }).toArray();
-            rights = selection.map(function(){
+            rights = selection.map(function () {
                 return $(this).offset().left + $(this).outerWidth();
             }).toArray();
 

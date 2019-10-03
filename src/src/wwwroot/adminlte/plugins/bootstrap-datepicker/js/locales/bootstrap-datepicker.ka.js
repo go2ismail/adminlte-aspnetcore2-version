@@ -2,7 +2,7 @@
  * Georgian translation for bootstrap-datepicker
  * Levan Melikishvili <levani0101@yahoo.com>
  */
-;(function($){
+; (function ($) {
     $.fn.datepicker.dates['ka'] = {
         days: ["კვირა", "ორშაბათი", "სამშაბათი", "ოთხშაბათი", "ხუთშაბათი", "პარასკევი", "შაბათი"],
         daysShort: ["კვი", "ორშ", "სამ", "ოთხ", "ხუთ", "პარ", "შაბ"],

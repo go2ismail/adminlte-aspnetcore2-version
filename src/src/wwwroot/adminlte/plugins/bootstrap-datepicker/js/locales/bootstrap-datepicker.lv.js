@@ -3,7 +3,7 @@
  * Artis Avotins <artis@apit.lv>
  */
 
-;(function($){
+; (function ($) {
     $.fn.datepicker.dates['lv'] = {
         days: ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena"],
         daysShort: ["Sv", "P", "O", "T", "C", "Pk", "S"],
